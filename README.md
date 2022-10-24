@@ -1,1 +1,3 @@
-# hillel_10_22
+# Hillel school
+## QA Automation Python
+### October 2022
