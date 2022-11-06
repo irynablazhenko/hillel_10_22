@@ -219,11 +219,13 @@ print(f'Максимальное значение в списке : {max_value} 
 print('\nЗадание 7')
 
 text = input('Введите текст: ')
+set_text = set(text)
 count = 0
-for i in text:
+for i in set_text:
     if i.isdigit():
         count += 1
     else:
         pass
-print(f'Количество цифр в тексте: {count}')
+print(f'Количество уникальных цифр в тексте: {count}')
+
 
