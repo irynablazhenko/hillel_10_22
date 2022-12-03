@@ -10,13 +10,15 @@ is_power_of_two(125) # 'no' потому что это не степень дв�
 # ____________________________________________________________________________________________________________
 while True:
     try:
-        number = int(input('Введите целое число : '))
+        number = int(input('Введите целое число: '))
         break
     except ValueError as e:
         print(f'Число не целое, ошибка: {e}')
 print(f'Число {number}')
 
 def is_power_of_two(number):
+    if (number <= 0):
+        return 0
     if (number == 1):
         return 1
     elif (number > 1 and number < 2):
