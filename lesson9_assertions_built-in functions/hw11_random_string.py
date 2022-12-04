@@ -36,4 +36,4 @@ def get_random_string(length: int) -> str:
     return string
 
 
-print(get_random_string(len_of_string))
+print(f'Рандомная строка: {get_random_string(len_of_string)}')
