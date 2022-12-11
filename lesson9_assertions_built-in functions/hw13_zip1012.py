@@ -22,6 +22,7 @@ seq2 = [9, 4, 2, 0]
 seq3 = [9, 4, 2, 6, 7, 3, 5]
 
 
+
 def custom_zip(*sequences: Iterable, full=False, default=None) -> List[Tuple]:
     print(f'Последовательности: {sequences}')
     len_sequences = len(sequences)  # Количество последовательностей
