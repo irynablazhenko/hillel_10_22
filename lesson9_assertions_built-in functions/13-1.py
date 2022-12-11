@@ -58,5 +58,5 @@ zip_value = custom_zip(seq1, seq2, seq3)
 # print(zip_value)
 
 
-print(f'zip {list(zip(seq1, seq2, seq3))}')
+print(f'\n\nzip {list(zip(seq1, seq2, seq3))}')
 print(f'tuple {tuple(seq1)}')
