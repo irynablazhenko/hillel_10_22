@@ -15,35 +15,39 @@ def custom_zip(*sequences: Iterable, full=False, default=None) -> List[Tuple]:
   pass
 """
 # -------------------------------------------------------------------------------------------------------------
-
 from typing import Iterable, List, Tuple
+
 
 seq1 = [1, 2, 3, 4, 5]
 seq2 = [9, 4, 2, 0]
 seq3 = [9, 4, 2, 6, 7, 3, 5]
 
 
+
 def custom_zip(*sequences: Iterable, full=False, default=None) -> List[Tuple]:
     min_len = 0
-    print(f'sequences {sequences}')
+    print(f'Список последовательностей - sequences: {sequences}')
     lens = list(map(len, sequences))
     m = min(lens)
-    print(f'lens {lens}')
-    print(f'm {m}')
+    print(f'Длина каждой последовательности из всех последовательностей - lens: {lens}')
+    print(f'Минимальная длина последовательности - m:  {m}')
     len_seq = len(sequences)
-    print(f'len_seq {len_seq}')
-    result_tuple = []
+    print(f'Количество последовательностей - sequences - len_seq: {len_seq}')
     i = 0
     j = 0
-    a = [[]]
+    a = []
+    tup = []
     for i in range(m):
-        print(f'sequences{i} {sequences[i]}')
-        for j in range(len_seq):
-            a[j].append(sequences[j][i])
-
+        for j in sequences:
+            a.append(j[i])
         print(f'a {a}')
+        tup.append(tuple(a[len(a)-len_seq:]))
+        print(f'tup {tup}')
 
-    return a
 
+    return tup
 
 zip_value = custom_zip(seq1, seq2, seq3)
+print(f'Результат выполнения custom_zip: \n\t{zip_value}')
+print(f'zip {list(zip(seq1, seq2, seq3))}')
+
