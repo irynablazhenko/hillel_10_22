@@ -31,10 +31,10 @@ def custom_map(function, *iterables):
             min_len = len(i)
 
     for i in range(min_len):
-        args = []
+        params = []
         for j in iterables:
-            args.append(j[i])
-        result.append(function(*args))
+            params.append(j[i])
+        result.append(function(*params))
 
     return result
 
