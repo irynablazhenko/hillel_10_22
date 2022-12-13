@@ -15,7 +15,6 @@ Lecture 32: 02 Feb 2023 19:15
 from datetime import timedelta, date
 
 first_lesson = date(2022, 10, 17)
-date.today()
 
 dates = []
 next_lesson = first_lesson
