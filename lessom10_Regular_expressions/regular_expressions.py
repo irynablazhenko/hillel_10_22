@@ -5,14 +5,14 @@ text = """
 """
 
 s = "as,df,a,sfdf"
-print(s.isalnum())
-print(s.split('s,'))
+# print(s.isalnum())
+# print(s.split('s,'))
 
 import re
 
-# pattern = 'href="(.*)"'
-# re_obj = re.compile(pattern)
-# res = re_obj.findall(text)
+pattern = 'href="(.*)"'
+re_obj = re.compile(pattern)
+res = re_obj.findall(text)
 #
 # print(res)
 #
@@ -34,25 +34,25 @@ res5 = re.search(pattern, text)
 print(res5.span())
 print(res5.group())
 
-pattern = 'href="(QQ.*)"'
+pattern = 'href="(.*)"'
 res6 = re.search(pattern, text)
-print(res6)
+print(f'res6 {res6}')
 if res6:
-    print(res6.group())
+    print(f'res6.group() {res6.group()}')
 else:
     print("Nothing found")
 
 # ####################################################33
 
-text = "[1,2,3,[4,5],6,7]"
-pattern = "[\[,\]]"
-res7 = re.split(pattern, text)
-print(res7)
-
-pattern = '[a-z]'
-text = "sdfsadsafdGJHGJHFHFS"
-res = re.findall(pattern, text, flags=re.IGNORECASE)
-print(res)
+# text = "[1,2,3,[4,5],6,7]"
+# pattern = "[\[,\]]"
+# res7 = re.split(pattern, text)
+# print(res7)
+#
+# pattern = '[a-z]'
+# text = "sdfsadsafdGJHGJHFHFS"
+# res = re.findall(pattern, text, flags=re.IGNORECASE)
+# print(res)
 
 # TODO: dsdds
 # FIXME: dfffsdf
