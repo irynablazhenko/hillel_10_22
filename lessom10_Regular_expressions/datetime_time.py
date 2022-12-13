@@ -31,21 +31,23 @@ import time
 from datetime import timedelta, datetime, date
 
 t1 = timedelta(days=1)
-print(t1)
+print(f't1 {t1}')
 t2 = timedelta(hours=12)
-print(t2)
+print(f't2 {t2}')
 t3 = t1 + t2
-print(t3)
+print(f't3 {t3}')
 year = timedelta(days=1) * 365
-print(year)
+print(f'year {year}')
 
 now = datetime.now()
-print(now)
-print(now + year)
+print(f'now {now}')
+print(f'now + year {now+year}')
 
 t333= datetime.fromtimestamp(1)
-print(t333)
+print(f't333 {t333}')
 
 print(datetime.now() - t333)
 
 print(now.strftime("%Y %H:%M"))
+print(f'now {now: %d %b %Y} 19:15')
+print(f'{:>now}.fo  {now: %d %b %Y} 19:15')
