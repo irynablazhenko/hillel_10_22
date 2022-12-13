@@ -25,10 +25,10 @@ def custom_zip(*sequences: Iterable, full=False, default=None) -> List[Tuple]:
     return result_tuple
 
 
-seq1 = [1,    2, 3, 4, 5]
-seq2 = [9,    8, 7]
+seq1 = [1, 2, 3, 4, 5]
+seq2 = [9, 8, 7]
 seq3 = ['a', 'b']
-seq4 = [0,    0, 0, 0]
+seq4 = [0, 0, 0, 0]
 
 
 assert custom_zip(seq1, seq2) == [(1, 9), (2, 8), (3, 7)]
