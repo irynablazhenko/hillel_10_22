@@ -20,9 +20,10 @@ andrew = Employee('Андрей', 'Козачок', 2, 900)
 kostya = Employee('Костантин', 'Кривенко', 1, 500)
 kristina = Employee('Кристина', 'Иванечко', 2, 1300)
 employees = [andrew, kostya, kristina]
+salaries = [employee.salary for employee in employees]
 
 """Расчет зарплатного фонда"""
-Employee.get_salary_total(Employee.salaries)
+Employee.get_salary_total(salaries)
 
 """Расчет количества сотрудников при указанном приросте в %"""
 Employee.employee_predict(0.4)
@@ -30,9 +31,10 @@ Employee.employee_predict(0.4)
 """Создание сотруников"""
 nikita = Employee('Никита', 'Петров', 4, 2240)
 employees.append(nikita)
+salaries.append(nikita.salary)
 
 """Расчет зарплатного фонда с учетом нового сотрудника"""
-Employee.get_salary_total(Employee.salaries)
+Employee.get_salary_total(salaries)
 
 """Расчет количества сотрудников при указанном приросте в %"""
 Employee.employee_predict(0.4)

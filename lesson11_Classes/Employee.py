@@ -1,7 +1,7 @@
 class Employee:
     department = 'QA engineer'
     count = 0  # счетчик сотрудников
-    salaries = []
+    # salaries = []
 
     def __init__(self, name, surname, work_experience, salary):
         """Инициализация эллементов класа"""
@@ -11,7 +11,7 @@ class Employee:
         self.salary = salary
         self.english_level = 'intermedia'
         Employee.count += 1
-        Employee.salaries.append(self.salary)
+        # Employee.salaries.append(self.salary)
 
     def change_name(self, new_name):
         """Изменение имени сотрудника"""
